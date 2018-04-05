@@ -1,0 +1,39 @@
+
+.td_tab__nav_wrapper {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .td_tab__nav_wrapper li {
+    float: left;
+    margin-right: 16px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  .td_tab__active {
+    color: white;
+    background:red;
+    transition: .3s;
+  }
+  .td_tab__nav_container {
+    height: 40px;
+    border-bottom: 3px solid black;
+    position: relative;
+  }
+  .td_tab__line {
+    clear: both;
+    width: 57px;
+    height: 3px;
+    background: red;
+    position: relative;
+    top:9px;
+  }
+  .td_tab__content {
+    display: none;
+  }
+  .td_tab__active_content {
+    display: block;
+  }
+  
