@@ -10,24 +10,22 @@
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-    
+    color: rgba(0, 0, 0, 0.7);
   }
   .td_tab__active {
-    color: white;
-    background:red;
+    color: rgba(0, 0, 0, 0.7);
     transition: .3s;
   }
   .td_tab__nav_container {
     height: 40px;
-    border-bottom: 3px solid black;
     position: relative;
   }
   .td_tab__line {
     clear: both;
     width: 57px;
     height: 3px;
-    background: red;
     position: relative;
+    background-color: #42b549;
     top:9px;
   }
   .td_tab__content {

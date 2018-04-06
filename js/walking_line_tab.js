@@ -1,5 +1,9 @@
 (function( $ ) {
     $.fn.tabLine = function(options) {
+
+    var plugin = $(this);
+    plugin.addClass("td_tab__nav_container");
+    plugin.children("ul").addClass("td_tab__nav_wrapper");
       
     var params = $.extend({
       speed: 500,
@@ -8,7 +12,7 @@
        
     var tabContent = ".td_tab__content";
     var $tabContentFirst = $(tabContent + ":first");
-    var $navTarget = $(".td_tab__nav_wrapper li");
+    var $navTarget = plugin.children(".td_tab__nav_wrapper").children("li");
     var tabActiveContent = "td_tab__active_content";
     var tabActive = 'td_tab__active'
     var line = '<div class="td_tab__line"></>';
@@ -20,7 +24,7 @@
     $tabContentFirst.addClass(tabActiveContent);
     $navTarget.first().addClass(tabActive);
     btnWidth = $navTarget.first().innerWidth();
-    $('.td_tab__nav_container').append(line);
+    plugin.append(line);
     
     if($navTarget.first()) {
       $('.td_tab__line').css('width',btnWidth);
@@ -66,8 +70,3 @@
       
     }
 }( jQuery ));
-    
-  
-      
-  
-  
