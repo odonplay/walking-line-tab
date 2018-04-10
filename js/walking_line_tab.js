@@ -60,12 +60,12 @@
     for (var i = 0 ; i < myIndex; i++) {
       sum+= arrWidth[i];
     }
-  
+  }
+
+  plugin.openTabContent = function(element) {
     var prefix = $(element).attr("id");
-    if($(element).hasClass("td_tab__nav")){
-      $(tabContent).removeClass(tabActiveContent);
-      $('#'+ prefix + '_content').addClass(tabActiveContent);
-    }
+    $(tabContent).removeClass(tabActiveContent);
+    $('#'+ prefix + '_content').addClass(tabActiveContent);
   }
 
   plugin.onClickEvent = function() {
@@ -73,8 +73,10 @@
       var isActive = $(this).hasClass(tabActive);
       if(!isActive) {
         $(this).addClass(tabActive).siblings().removeClass(tabActive);
+        
         plugin.setTabLine($(this));
-      
+        plugin.openTabContent($(this));
+
         $("."+line).animate({
           left: sum + "px",
           width: btnWidth + 'px'
