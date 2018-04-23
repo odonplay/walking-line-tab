@@ -6,21 +6,17 @@
   $.fn.tabLine = function(options) {
 
   var plugin = $(this);
-
-  plugin.addClass("td_tab__nav_container");
-  plugin.children("ul").addClass("td_tab__nav_wrapper");
-  
   var params = $.extend({
     speed: 500,
     easing: "linear",
   }, options);
      
-  var tabContent = ".td_tab__content";
+  var tabContent = ".wlt__content";
   var $tabContentFirst = $(tabContent + ":first");
-  var $navTarget = plugin.children(".td_tab__nav_wrapper").children("li");
-  var tabActiveContent = "td_tab__active_content";
-  var tabActive = 'td_tab__active';
-  var line = 'td_tab__line';
+  var $navTarget = plugin.find(".wlt__nav_wrapper li");
+  var tabActiveContent = "wlt__active_content";
+  var tabActive = 'wlt__active';
+  var line = 'wlt__line';
   var lineEl = '<div class='+line+'></>';
   var arrWidth  = [];
   var sum;
@@ -28,7 +24,7 @@
   var elMargin;
 
   if(plugin.find('.'+line).length === 0)
-    plugin.append(lineEl);
+    plugin.find('.wlt__nav_container').append(lineEl);
 
   plugin.init = function() {
   

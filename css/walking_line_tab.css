@@ -1,10 +1,10 @@
 
-.td_tab__nav_wrapper {
+.wlt__nav_wrapper {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  .td_tab__nav_wrapper li {
+  .wlt__nav_wrapper li {
     float: left;
     margin-right: 16px;
     padding: 5px 10px;
@@ -12,15 +12,15 @@
     cursor: pointer;
     color: rgba(0, 0, 0, 0.7);
   }
-  .td_tab__active {
+  .wlt__active {
     color: rgba(0, 0, 0, 0.7);
     transition: .3s;
   }
-  .td_tab__nav_container {
+  .wlt__nav_container {
     height: 40px;
     position: relative;
   }
-  .td_tab__line {
+  .wlt__line {
     clear: both;
     width: 57px;
     height: 3px;
@@ -28,10 +28,10 @@
     background-color: #42b549;
     top:9px;
   }
-  .td_tab__content {
+  .wlt__content {
     display: none;
   }
-  .td_tab__active_content {
+  .wlt__active_content {
     display: block;
     animation: contentTransition .5s;
     animation-fill-mode: both
