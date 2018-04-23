@@ -87,7 +87,7 @@
 
   function afterResize(){
     plugin.getLinePosition();
-    var activeTarget = plugin.children(".td_tab__nav_wrapper").children("li." + tabActive);
+    var activeTarget = plugin.find(".wlt__nav_wrapper li." + tabActive);
     plugin.setTabLine($(activeTarget));
     $("."+line).css({
       left: sum + "px",
